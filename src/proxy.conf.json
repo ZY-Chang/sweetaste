@@ -1,0 +1,8 @@
+
+{
+  "/sweetApi": {
+    "target": "http://presale.money-link.com.tw",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-md navbar-light bg-white">
+  <div class="container d-flex">
+    <!-- 漢堡 -->
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="width: 25px;"></span>
+    </button>
+    <!-- 圖示 -->
+    <a class="navbar-brand" href="#">
+      <img src="../../../assets/img/logo-all-dark.svg" height="40" class="d-none d-md-block">
+      <img src="../../../assets/img/logotype-lg-dark.svg" height="17" class="d-block d-md-none">
+    </a>
+    <!-- 購物車 -->
+    <a class="nav-link text-primary ms-4 order-md-1 position-relative" routerLink="/cart" *ngIf="isShowCartIcon">
+      <i class="fa-solid fa-cart-shopping fa-lg"></i>
+      <!-- 顯示購物車項目數量的紅點 -->
+      <span *ngIf="cartItemCount > 0" class="badge bg-danger rounded-circle position-absolute bottom-0 right-0 navbar-red-dot">{{ cartItemCount }}</span>
+    </a>
+    <!-- 導覽列 -->
+    <div class="collapse navbar-collapse mt-4 mt-md-0" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0 ms-auto ">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="selected">首頁</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/product" routerLinkActive="selected">甜點</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" routerLink="/login" routerLinkActive="selected" *ngIf="!isLogin">登入</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" routerLinkActive="selected" *ngIf="isLogin" (click)="logout()">登出</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

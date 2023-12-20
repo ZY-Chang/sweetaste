@@ -1,0 +1,18 @@
+// success
+.success-btn{
+    padding: 1rem 8.5rem;
+    font-size: 1.2rem;
+    &:hover{
+        background-color: #fad765 !important;
+    }
+}
+.success-img{
+    margin: 2rem;
+}
+
+
+@media (max-width: 768px) {
+    .success-btn{
+        width: 100%;
+    }
+}

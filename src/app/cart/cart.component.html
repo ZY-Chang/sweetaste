@@ -1,0 +1,24 @@
+<div class="container my-5">
+  <!-- 明細 -->
+  <div class="row">
+    <div class="col-md-8">
+      <div class="bg-secondary mb-4">
+        <h2 class="mb-0 py-3 text-center text-primary h4">您的購物車</h2>
+      </div>
+
+      <ul class="p-0">
+        <app-cart-item></app-cart-item>
+        <hr class="d-block d-md-none">
+      </ul>
+    </div>
+
+    <!-- 總結 -->
+    <div class="cart-bill col-md-4">
+      <div>
+        <app-sammary></app-sammary>
+      </div>
+      <a class="btn btn-accent rounded-0 w-100 py-3 fs-5 text-primary" (click)="checkout()">結帳</a>
+    </div>
+
+  </div>
+</div>

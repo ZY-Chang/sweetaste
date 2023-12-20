@@ -1,0 +1,125 @@
+<!-- login -->
+<div class="container my-md-5">
+  <div class="row">
+    <div class="col-md-10 ms-auto me-auto">
+      <div class="row">
+        <!-- 行動版title -->
+        <div class="d-block d-md-none p-0 order-1">
+          <h2 class="mb-0 py-5 text-center bg-primary text-white fs-2">會員登入</h2>
+        </div>
+
+        <!-- 左邊 -->
+        <div class="login-form col-md-6 pt-4 px-0 pt-md-0 bg-primary order-3 order-md-1">
+          <!-- 桌面板title -->
+          <div class="p-5 d-none d-md-block">
+            <h2 class="mb-0 text-center bg-primary text-white h1 ">會員登入</h2>
+          </div>
+          <!-- 表單 -->
+          <div>
+            <form class=" pt-md-0" (submit)="login()">
+              <!-- 錯誤訊息 -->
+              <div *ngIf="errorMessage" class="mx-4 alert alert-danger" role="alert">
+                {{ errorMessage }}
+              </div>
+              <!-- 帳號 -->
+              <div class="px-4 mb-3 input-group ">
+                <div class="input-group-text rounded-0 border-0 bg-secondary px-3"><i
+                    class="fa-solid fa-user fa-lg"></i></div>
+                <input type="text" class="form-control rounded-0 border-0 py-3" id="account" [(ngModel)]="username"
+                  name="username" placeholder="電子信箱/手機號碼">
+              </div>
+              <!-- 密碼 -->
+              <div class="px-4 mb-3 input-group ">
+                <div class="input-group-text rounded-0 border-0 bg-secondary px-3"><i class="fa-solid fa-key fa-lg"></i>
+                </div>
+                <input type="password" class="form-control rounded-0 border-0 py-3" id="password" [(ngModel)]="password"
+                  name="password" placeholder="請輸入使用者密碼">
+              </div>
+              <!-- 其他功能 -->
+              <div class="d-flex justify-content-between mb-4">
+                <div class="ms-4 mb-3 form-check text-white">
+                  <input type="checkbox" class="form-check-input rounded-0" id="Check" [checked]="rememberMe" (click)="changeRememberMe()">
+                  <label class="form-check-label" for="Check">記住我</label>
+                </div>
+                <a type="button" class="me-4 text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  註冊帳號
+                </a>
+              </div>
+              <!-- 登入 -->
+              <button type="submit" class="btn btn-accent rounded-0 w-100 py-3 fs-5 text-primary">登入帳號</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- 右邊 -->
+        <div class="col-md-6  text-center text-primary-light py-4 bg-secondary h-auto order-2 order-md-2">
+          <p class="h4 mb-4 d-none d-md-block">—— 連結社群帳號 ——</p>
+          <!-- g0=no-gutters -->
+          <div class="row g-0">
+            <div class="col-4 col-md-12">
+              <button class="btn btn-light rounded-0 py-3 mb-md-4 login-btn sel-btn">
+                <img src="../../assets/img/ic-yahoo.svg" class="img-fluid" width="97">
+              </button>
+            </div>
+            <div class="col-4 col-md-12">
+              <button class="btn btn-light rounded-0 py-3 mb-md-4 login-btn sel-btn">
+                <img src="../../assets/img/ic-google.svg" class="img-fluid" width="70">
+              </button>
+            </div>
+            <div class="col-4 col-md-12">
+              <button class="btn btn-light rounded-0 py-3 login-btn sel-btn">
+                <img src="../../assets/img/ic-facebook-logotype.svg" class="img-fluid" width="108">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Button trigger modal -->
+
+
+<!-- 註冊Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-secondary">
+        <h5 class="modal-title text-primary" id="exampleModalLabel">註冊帳號</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!-- 主要內容 -->
+      <div class="modal-body bg-secondary rounded-bottom">
+        <form class=" pt-md-0" (submit)="login()">
+          <!-- 錯誤訊息 -->
+          <div *ngIf="registerErrorMessage" class="mx-4 alert alert-danger" role="alert">
+            {{ registerErrorMessage }}
+          </div>
+          <!-- 帳號 -->
+          <div class="px-4 mb-3 input-group ">
+            <div class="input-group-text rounded-0 border-end-0 bg-secondary px-3"><i class="fa-solid fa-user fa-lg"></i>
+            </div>
+            <input type="text" class="form-control rounded-0 border-start-0 py-3" id="registerUsername" [(ngModel)]="registerUsername"
+              name="registerUsername" placeholder="電子信箱/手機號碼">
+          </div>
+          <!-- 密碼 -->
+          <div class="px-4 mb-3 input-group ">
+            <div class="input-group-text rounded-0 border-end-0 bg-secondary px-3"><i class="fa-solid fa-key fa-lg"></i>
+            </div>
+            <input type="password" class="form-control rounded-0 border-start-0 py-3" id="registerPassword" [(ngModel)]="registerPassword"
+              name="registerPassword" placeholder="請輸入使用者密碼">
+          </div>
+          <!-- 註冊按鈕 -->
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-primary me-4" (click)="checkUserExist()">註冊</button>
+          </div>
+        </form>
+      </div>
+      <!-- 主要內容結束 -->
+    </div>
+  </div>
+</div>

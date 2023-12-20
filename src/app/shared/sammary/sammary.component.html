@@ -1,0 +1,37 @@
+
+<!-- cart顯示 -->
+<div class=" p-md-3 py-3 pt-0" *ngIf="currentUrl==='/cart'">
+  <h2 class="text-center h4 py-3">訂單摘要</h2>
+  <hr class="border-white mt-0" >
+  <div class="d-flex justify-content-between mb-2">
+    <span>小計</span>
+    <span>{{subTotal}}</span>
+  </div>
+  <div class="d-flex justify-content-between mb-3">
+    <span>運費</span>
+    <span>NT$ {{deliveryFee}}</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <span class="h5">總計</span>
+    <span class="h5">{{total}}</span>
+  </div>
+</div>
+
+<!-- checkout顯示 -->
+<h2 class="text-center py-3 bg-secondary" *ngIf="currentUrl!=='/cart'">訂單摘要</h2>
+<div class="p-3" *ngIf="currentUrl!=='/cart'">
+  <div class="d-flex justify-content-between mb-2">
+    <span>小計</span>
+    <span>NT$ {{subTotal}}</span>
+  </div>
+  <div class="d-flex justify-content-between mb-3">
+    <span>運費</span>
+    <span>NT$ {{deliveryFee}}</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <span class="h5">總計</span>
+    <span class="h5">NT$ {{total}}</span>
+  </div>
+</div>
+
+

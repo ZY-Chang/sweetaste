@@ -1,0 +1,18 @@
+<div class="container my-md-5">
+  <div class="row">
+    <!-- 表單 -->
+    <div class="col-md-8 ">
+      <router-outlet></router-outlet>
+    </div>
+
+    <!-- 總結 -->
+    <div class="col-md-4 d-none d-md-block text-primary-light checkout-list">
+      <div class=" mb-4 border checkout-list">
+        <app-sammary></app-sammary>
+      </div>
+      <div class="mb-4 border checkout-list">
+        <app-order2></app-order2>
+      </div>
+    </div>
+  </div>
+</div>

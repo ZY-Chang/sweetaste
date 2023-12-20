@@ -1,0 +1,55 @@
+<div class="bg-primary">
+  <div class="text-white">
+    <form class="row g-3 p-4 mt-0 fw-light" [formGroup]="bill2Form">
+      <div class="col-6 m-0 mb-md-3">
+        <h1 class="fw-bolder checkout-title">發票</h1>
+      </div>
+      <div class="col-6 d-flex align-items-center m-0">
+        <div class="step w-100 ">
+          <div class="step-circle"><i class="fa-solid fa-check fa-2xs"></i></div>
+          <div class="step-circle"><i class="fa-solid fa-check fa-2xs"></i></div>
+          <div class="step-circle active"></div>
+        </div>
+      </div>
+      <div class="col-12 mb-4">
+        <nav class="nav nav-pills nav-fill checkout-nav p-0 fw-bolder h4">
+          <a class="nav-link m-0 py-3 text-secondary" routerLink="/checkout/process/bill-1">電子發票</a>
+          <a class="nav-link m-0 py-3 active " href="#">郵寄發票</a>
+        </nav>
+      </div>
+      <div class="col-12 d-flex justify-content-between">
+        <label class="form-label h4">地址</label>
+        <div class="form-check p-0 m-0">
+          <input type="checkbox" class="form-check-input rounded-0" id="Check" (change)="toggleSameAddress()" formControlName="sameAddress">
+          <label class="form-check-label" for="Check">同郵寄地址</label>
+        </div>
+      </div>
+
+      <div class="col-6 mt-0">
+        <select class="form-select form-select-lg mb-3 rounded-0 py-3 text-primary-light" formControlName="city">
+          <option selected>高雄市</option>
+          <option>新北市</option>
+          <option>台北市</option>
+        </select>
+      </div>
+      <div class="col-6 mt-0">
+        <select class="form-select form-select-lg mb-3 rounded-0 py-3 text-primary-light" formControlName="district">
+          <option selected>新興區</option>
+          <option>OO區</option>
+          <option>XX區</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <input type="text" class="form-control form-control-lg rounded-0 py-3" id="bill-address" placeholder="幸福路520號"
+          formControlName="address">
+      </div>
+      <div class="col-12">
+        <label for="companyID" class="form-label h4">統一編號（選填）</label>
+        <input type="text" class="form-control form-control-lg border-end-0 rounded-0 py-3" id="companyID"
+          placeholder="12345678" formControlName="taxID">
+      </div>
+
+    </form>
+  </div>
+  <a routerLink="/checkout/success" class="btn btn-accent rounded-0 w-100 py-3 fs-5 text-primary" (click)="submit($event)">送出訂單</a>
+</div>

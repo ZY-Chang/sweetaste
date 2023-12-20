@@ -1,0 +1,95 @@
+// step
+.step {
+    $circle-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .step-circle {
+        height: $circle-size;
+        width: $circle-size;
+        border: 1px solid #8DA291;
+        border-radius: 50%;
+        position: relative;
+        background-color: $primary;
+        z-index: 1;
+        // 控制active-circle 位置
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // 畫線
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: #8DA291;
+    }
+
+    // 目前步驟
+    .step-circle.active {
+        border-color: $secondary;
+
+        &:after {
+            content: "";
+            height: $circle-size - 6;
+            width: $circle-size - 6;
+            display: block;
+            background-color: $secondary;
+            border-radius: $circle-size;
+        }
+    }
+
+    // 完成步驟
+    .step-circle.completed {
+        font-size: 1rem;
+        background-color: $secondary;
+        color: $primary;
+    }
+
+
+    // Theme 深色
+    &.step-dark {
+        border-color: $primary;
+
+        &:after {
+            background-color: $primary;
+        }
+
+        .step-circle {
+            border-color: $primary;
+        }
+
+        .step-circle.active {
+            border-color: $primary;
+
+            &:after {
+                background-color: $primary;
+            }
+        }
+
+        .step-circle.completed {
+            background-color: $primary;
+            color: #8DA291;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .step {
+        width: 90%;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .step {
+        width: 30%;
+    }
+
+}

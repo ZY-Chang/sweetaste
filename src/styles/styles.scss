@@ -1,0 +1,75 @@
+
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "./helper/variables";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+// page
+@import "./helper/home";
+@import "./helper/login";
+@import "./helper/cart";
+@import "./helper/checkout";
+@import "./helper/success";
+@import "./helper/product";
+
+// component
+@import "./helper/product_card";
+@import "./helper/step";
+
+.nav-link{
+  cursor: pointer;
+}
+
+.navbar-red-dot{
+  font-size: 0.5rem;
+}
+
+li{
+    list-style: none;
+}
+
+.text-primary-light{
+    color: #8DA291;
+}
+
+.bg-cover {
+    background-size: cover;
+    background-position: center center;
+}
+.text-space {
+    letter-spacing: 0.5em;
+}
+@media (min-width: 768px) {
+    .footer-input{
+        width: 50%;
+    }
+}
+@media (max-width: 768px) {
+    .footer-input{
+        width: 90%;
+    }
+}
+
+
+// 隱藏箭頭
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+
+// ----------------------------
+
+
+
+
+
+
+
+
+
+

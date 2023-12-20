@@ -1,0 +1,14 @@
+<header class="container" style="position: relative;">
+  <!-- home -->
+  <div class="bg-cover"
+    style="height: 496px; background-image:url(https://bit.ly/2OhbMHr);"
+    *ngIf="currentUrl==='/home'">
+  </div>
+  <!-- product -->
+  <div class="bg-cover"
+    style="height: 496px; background-image:url(https://bit.ly/2Qodh3Z);"
+    *ngIf="currentUrl==='/product'">
+  </div>
+  <img src="../../../assets/img/lg-想吃甜點是不需要理由的.svg" width="85px" style="position: absolute; right: 50px; top: 50px;"
+          class="d-none d-md-block" *ngIf="currentUrl==='/product'">
+</header>

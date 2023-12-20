@@ -1,0 +1,24 @@
+
+<!-- <ul class="list-group text-center rounded-0" >
+  <a class="h4 list-group-item mb-0 product-list"
+     *ngFor="let item of productObj"
+     (click)="onItemSelected(item)"
+     [class.product-list-selected]=" selectedItem === item[0] "
+     [class.disabled]=" item[3]===0 "
+     >{{item[1]}} ( {{item[3]}} )</a>
+</ul> -->
+
+
+<ul class="list-group text-center rounded-0" >
+  <a class="h4 list-group-item mb-0 product-list"
+     *ngFor="let item of productObj"
+     (click)="onItemSelected(item)"
+     [class.product-list-selected]=" selectedItem === item.typeID "
+     [class.disabled]=" item.typeLength===0 "
+     >{{item.typeName}} ( {{item.typeLength}} )</a>
+</ul>
+
+
+
+
+

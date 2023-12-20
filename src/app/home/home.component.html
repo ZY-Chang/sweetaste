@@ -1,0 +1,40 @@
+<!-- 首圖 -->
+<app-header></app-header>
+
+<!-- 選單 -->
+<div class="d-flex justify-content-center" style="margin-top:-120px;">
+  <div class="card border-0 bg-cover homelist"
+    style="background-image: url(https://bit.ly/2QbVsVR);">
+    <div class="card-body vlr p-0">
+      <a class="nav-link home-link d-flex justify-content-center align-items-center fs-4 text-space" (click)="routerToProduct()">本日精選</a>
+    </div>
+  </div>
+  <div class="card border-0 bg-cover homelist"
+    style="background-image: url(https://bit.ly/2zL5jN7);">
+    <div class="card-body vlr p-0">
+      <a class="nav-link home-link d-flex justify-content-center align-items-center fs-4 text-space" (click)="routerToProduct()">人氣推薦</a>
+    </div>
+  </div>
+  <div class="card border-0 bg-cover homelist"
+    style="background-image: url(https://bit.ly/2R5tqwD);">
+    <div class="card-body vlr p-0">
+      <a class="nav-link home-link d-flex justify-content-center align-items-center fs-4 text-space" (click)="routerToProduct()">新品上市</a>
+    </div>
+  </div>
+</div>
+
+<!-- 文章 -->
+<app-article></app-article>
+
+<!-- 標語 -->
+<div class="my-5 md-5 d-flex justify-content-center align-items-center">
+  <img src="../../assets/img/lg-想吃甜點是不需要理由的.svg" class="img-fluid d-none d-md-block" width="89" alt="">
+  <img src="../../assets/img/sm-橫式-想吃甜點是不需要理由的.svg" class="img-fluid d-block d-md-none" width="256" alt="">
+</div>
+
+<!-- 推薦商品 -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <app-product-card class="row"></app-product-card>
+  </div>
+</section>

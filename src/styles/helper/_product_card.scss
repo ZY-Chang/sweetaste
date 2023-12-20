@@ -1,0 +1,33 @@
+.fa-heart{
+    cursor:pointer;
+}
+
+.card-img-top{
+    height: 300px;
+}
+
+.product-card-tag{
+    background-color: $primary;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    padding: 1rem 0.5rem;
+    writing-mode: vertical-rl;
+    letter-spacing: 0.5em;
+}
+
+.product-card-heart{
+    color: $primary;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.product-card-btn{
+    background-color: $secondary;
+    color: $primary;
+    &:hover{
+        background-color: shade-color($secondary, 5%) !important;
+    }
+}

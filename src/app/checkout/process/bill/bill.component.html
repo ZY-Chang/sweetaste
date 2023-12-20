@@ -1,0 +1,38 @@
+<div class="bg-primary">
+  <div class="text-white">
+      <form class="row g-3 p-4 mt-0 h4 fw-light" [formGroup]="billForm">
+          <div class="col-6 m-0 mb-md-3">
+              <h1 class="fw-bolder checkout-title">發票</h1>
+          </div>
+          <div class="col-6 d-flex align-items-center m-0">
+              <div class="step w-100">
+                  <div class="step-circle"><i class="fa-solid fa-check fa-2xs"></i></div>
+                  <div class="step-circle"><i class="fa-solid fa-check fa-2xs"></i></div>
+                  <div class="step-circle active"></div>
+              </div>
+          </div>
+          <div class="col-12 mb-4">
+              <nav class="nav nav-pills nav-fill checkout-nav p-0 fw-bolder">
+                  <a class="nav-link m-0 py-3 h4 active" href="#">電子發票</a>
+                  <a class="nav-link m-0 py-3 h4 text-secondary" routerLink="/checkout/process/bill-2">郵寄發票</a>
+              </nav>
+          </div>
+
+          <div class="col-12">
+              <label for="email" class="form-label">電子郵件信箱</label>
+              <input type="text"
+                  class="form-control form-control-lg border-end-0 rounded-0 py-3"
+                  id="email" placeholder="example@email.com" formControlName="email">
+
+          </div>
+          <div class="col-12">
+              <label for="companyID" class="form-label">統一編號（選填）</label>
+              <input type="text"
+                  class="form-control form-control-lg border-end-0 rounded-0 py-3"
+                  id="companyID" placeholder="12345678" formControlName="taxID">
+          </div>
+          <button type="submit"
+        class="btn btn-accent rounded-0 w-100 py-3 fs-5 text-primary mt-5" (click)="submit($event)">送出訂單</button>
+      </form>
+  </div>
+</div>

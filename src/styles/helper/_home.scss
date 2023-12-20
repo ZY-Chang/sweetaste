@@ -1,0 +1,52 @@
+.home-link {
+  // 毛玻璃
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  // 濾鏡
+  background-color: rgba($color: $main, $alpha: 0.8);
+  color: white;
+
+  &:hover {
+    backdrop-filter: blur(0px);
+    background-color: rgba($color: $accent, $alpha: 0.8);
+    color: $primary;
+  }
+}
+.homelist{
+  width: 280px;
+  height: 256px;
+}
+
+
+.vlr {
+  writing-mode: vertical-rl;
+}
+
+@media (min-width: 768px) {
+  section.home {
+    background-color: #EAF0ED;
+    margin: 6rem 0rem;
+  }
+
+  .home-pic {
+    margin-top: -24px;
+    margin-bottom: -24px;
+    width: 460px;
+    // height:460px;
+  }
+
+  .home-text {
+    height: 300px;
+    writing-mode: vertical-rl;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .home-pic {
+    margin: auto;
+    width: 90%;
+    height: 250px;
+  }
+}

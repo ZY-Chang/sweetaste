@@ -1,0 +1,39 @@
+// cart
+@media (min-width: 768px) {
+    .cart-bill div{
+            background-color: $primary;
+            color: white;
+    }
+    .cart-img{
+        width: 110px;
+        height: 110px;
+    }
+}
+@media (max-width: 768px) {
+    .cart-bill div {
+        h2{
+            background-color: $secondary;
+        }
+        hr{
+            display: none;
+        }
+    }
+    .cart-img{
+        width: 180px;
+        height: 110px;
+    }
+}
+
+.cart-quantity{
+    height: 45px;
+    width: 120px;
+}
+
+.fa-trash{
+    cursor:pointer;
+}
+
+
+hr{
+    border-color: lightgray;
+}

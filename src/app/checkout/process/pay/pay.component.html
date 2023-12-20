@@ -1,0 +1,45 @@
+<div class="bg-primary">
+  <div class="text-white">
+    <form class="row g-3 mt-0 mx-0 pt-4 h4 fw-light" [formGroup]="payForm">
+      <div class="col-6 mb-md-3 ps-4">
+        <h1 class="fw-bolder m-0">運送</h1>
+      </div>
+      <div class="col-6 d-flex align-items-center m-0">
+        <div class="step w-100">
+          <div class="step-circle"><i class="fa-solid fa-check fa-2xs"></i></div>
+          <div class="step-circle active"></div>
+          <div class="step-circle"></div>
+        </div>
+      </div>
+      <div class="col-12 px-4">
+        <label for="cardID" class="form-label">信用卡卡號</label>
+        <div class="input-group">
+          <input type="text" class="form-control form-control-lg border-end-0 rounded-0 py-3" id="cardID"
+            placeholder="0912 3456 7890 1234" formControlName="cardId">
+          <span class="input-group-text rounded-0 text-primary bg-secondary"><i
+              class="fa-regular fa-credit-card fa-lg"></i></span>
+        </div>
+      </div>
+      <label for="lastname" class="form-label ps-4">持卡人姓名</label>
+      <div class="col-6 mt-0 ps-4">
+        <input type="text" class="form-control form-control-lg rounded-0 py-3" id="lastname" placeholder="王" formControlName="lastname">
+      </div>
+      <div class="col-6 mt-0 pe-4">
+        <input type="text" class="form-control form-control-lg rounded-0 py-3" id="firstname" placeholder="小明" formControlName="firstname">
+      </div>
+      <label for="month" class="form-label ps-4">有效期限</label>
+      <div class="col-6 mt-0 ps-4">
+        <input type="text" class="form-control form-control-lg rounded-0 py-3" id="month" placeholder="月" formControlName="validityMonth">
+      </div>
+      <div class="col-6 mt-0 pe-4">
+        <input type="text" class="form-control form-control-lg rounded-0 py-3" id="year" placeholder="年" formControlName="validityYear">
+      </div>
+      <div class="col-6 ps-4">
+        <label for="CVN" class="form-label">檢查碼</label>
+        <input type="text" class="form-control form-control-lg rounded-0 py-3" id="CVN" placeholder="123" formControlName="cardCVN">
+      </div>
+      <button type="submit" class="btn btn-accent rounded-0 w-100 py-3 fs-5 text-primary mt-5"
+        (click)="NextStep($event)">下一步</button>
+    </form>
+  </div>
+</div>

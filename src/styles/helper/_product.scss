@@ -1,0 +1,15 @@
+.product-list{
+    padding: 1rem 0rem;
+    &:hover{
+        background-color: $secondary;
+        color: black;
+    }
+}
+
+.product-list-selected{
+  background-color: $secondary ;
+}
+
+.list-group-item{
+  cursor: pointer;
+}
